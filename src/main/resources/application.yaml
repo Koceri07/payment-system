@@ -1,0 +1,14 @@
+spring:
+  application:
+    name: payment-system-matrix-164
+  datasource:
+    url: jdbc:postgresql://localhost:5432/payment_system
+    username: postgres
+    password: password
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    hibernate:
+      ddl-auto: validate
+    show-sql: true
+    properties:
+      hibernate.hibernate.format_sql: true

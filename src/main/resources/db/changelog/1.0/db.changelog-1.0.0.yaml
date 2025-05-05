@@ -1,0 +1,48 @@
+databaseChangeLog:
+  - changeSet:
+      id: create transfers table
+      author: huseynahmadov
+      changes:
+        - createTable:
+            tableName: transfers
+            columns:
+              - column:
+                  name: id
+                  type: BIGINT
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: transaction_id
+                  type: varchar(64)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: from_card
+                  type: varchar(16)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: to_card
+                  type: varchar(16)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: amount
+                  type: DECIMAL(16,2)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: status
+                  type: varchar(16)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: created_at
+                  type: TIMESTAMP
+                  defaultValueDate: now()
+              - column:
+                  name: updated_at
+                  type: TIMESTAMP
+                  defaultValueDate: now()
